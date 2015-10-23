@@ -5,7 +5,7 @@ var DomoModel;
 
 var setName = function(name) {
 	return _.escape(name).trim();
-}
+};
 
 var DomoSchema = new mongoose.Schema({
 	name: {
