@@ -1,4 +1,6 @@
 var models = require('../models');
+//var Rdio = require("../rdio.js");
+//var rdio = new Rdio(["so4lpco75bcuzk2khjo7equ7h4", "j5j_nctXrf4SSI3PyhynGg"]);
 
 var Account = models.Account;
 
@@ -26,7 +28,9 @@ var login = function(req, res){
 		}
 		
 		req.session.account = account.toAPI();
-		
+        
+		//var stuff = rdio.call('getPlaybackToken', {'keys': 'a254895,a104386'});
+        
 		res.json({redirect:'/maker'});
 	});
 };
@@ -62,8 +66,13 @@ var signup = function(req, res) {
 	});
 };
 
+var musicpage = function(req, res) {
+    res.render('musicpage', { csrfToken: req.csrfToken() });
+};
+
 module.exports.loginPage = loginPage;
 module.exports.login = login;
 module.exports.logout = logout;
 module.exports.signupPage = signupPage;
 module.exports.signup = signup;
+module.exports.musicpage = musicpage;

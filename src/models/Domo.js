@@ -7,6 +7,10 @@ var setName = function(name) {
 	return _.escape(name).trim();
 };
 
+var setNationality = function(nationality) {
+    return _.escape(nationality).trim();
+};
+
 var DomoSchema = new mongoose.Schema({
 	name: {
 		type: String,
@@ -21,6 +25,13 @@ var DomoSchema = new mongoose.Schema({
 		required: true
 	},
 	
+    nationality: {
+        type: String,
+        required: true,
+        trim: true,
+        set: setNationality
+    },
+    
 	owner: {
 		type: mongoose.Schema.ObjectId,
 		required: true,
@@ -36,7 +47,8 @@ var DomoSchema = new mongoose.Schema({
 DomoSchema.methods.toAPI = function() {
 	return {
 		name: this.name,
-		age: this.age
+		age: this.age,
+        nationality: this.nationality
 	};
 };
 
@@ -45,7 +57,7 @@ DomoSchema.statics.findByOwner = function(ownerId, callback) {
 		owner: mongoose.Types.ObjectId(ownerId)
 	};
 	
-	return DomoModel.find(search).select("name age").exec(callback);
+	return DomoModel.find(search).select("name age nationality").exec(callback);
 };
 
 DomoModel = mongoose.model('Domo', DomoSchema);
