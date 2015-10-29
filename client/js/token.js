@@ -32,6 +32,6 @@ THE SOFTWARE.
 //localhost playtoken
 //FglWMXHXAYlK0lRDTXEzbzQtME5xVHZkWGtvWFJwYndsb2NhbGhvc3Q1_2rutfVloqvwxAy0qUl_
 //heroku app playtoken
-//FiJWMjSCAYlK0lRDTXEzbzQtME5xVHZkWGtvWFJwYndnbGFjaWFsLXJlYWNoZXMtMjc4Ny5oZXJva3VhcHAuY29tfIvKBppKIR8udIyRcxs_nA
-var playback_token ="FiJWMjSCAYlK0lRDTXEzbzQtME5xVHZkWGtvWFJwYndnbGFjaWFsLXJlYWNoZXMtMjc4Ny5oZXJva3VhcHAuY29tfIvKBppKIR8udIyRcxs_nA=";
+//FiJWMjWxAYlK0lRDTXEzbzQtME5xVHZkWGtvWFJwYndnbGFjaWFsLXJlYWNoZXMtMjc4Ny5oZXJva3VhcHAuY29tVYo9qK6C4dXhGYn7hZv45Q==
+var playback_token ="FiJWMjWxAYlK0lRDTXEzbzQtME5xVHZkWGtvWFJwYndnbGFjaWFsLXJlYWNoZXMtMjc4Ny5oZXJva3VhcHAuY29tVYo9qK6C4dXhGYn7hZv45Q==";
 var domain = "glacial-reaches-2787.herokuapp.com";
